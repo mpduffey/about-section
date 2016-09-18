@@ -1,19 +1,19 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
-	selector:				'about-section',
+	selector:				'sps-about-section',
 	template:				`
 		<section id="about" class="section-padding white-bg text-center">
 			<div class="container mb-60">
 				<div class="row text-center">
 					<div class="col-md-6 wow slideInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<img src="img/gallery/wi-1.jpg" style="max-width: 457px; width: 100%;"/>
+						<img [src]="aboutImgSrc" style="max-width: 457px; width: 100%;"/>
 					</div>
 					<div class="col-md-6">
 						<div class="spacer-15"></div>
 						<h6 class="page-title-alt color mb-10">AMERICA <span class="text-light">FIRST</span></h6>
 						<h2 class="page-title mb-25">Wisconsin Women <span class="text-light">For Trump</span></h2>
-						<p class="mb-35">We are women in the state of Wisconsin who support the election of Donald Trump and Governor Mike Pence to be President and Vice President of the United States. We believe in a strong national defense, a growing and robust economy, protection of our freedoms, and an America that is safe, secure, and propserous for our futures, our children and our grandchildren.</p>
+						<p class="mb-35">{{aboutText}}</p>
 					</div>
 				</div>
 			</div>
@@ -21,6 +21,8 @@ import {Component} from '@angular/core';
 	`
 })
 
-export class AboutSection {
-	
+export class SpsAboutSection {
+	@Input("about-title") aboutTitle;
+	@Input("about-text") aboutText;
+	@Input("about-img-src") aboutImgSrc;
 }
