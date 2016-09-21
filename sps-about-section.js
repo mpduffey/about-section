@@ -13,21 +13,13 @@ var SpsAboutSection = (function () {
     function SpsAboutSection() {
     }
     __decorate([
-        core_1.Input("about-title"), 
+        core_1.Input(), 
         __metadata('design:type', Object)
-    ], SpsAboutSection.prototype, "aboutTitle", void 0);
-    __decorate([
-        core_1.Input("about-text"), 
-        __metadata('design:type', Object)
-    ], SpsAboutSection.prototype, "aboutText", void 0);
-    __decorate([
-        core_1.Input("about-img-src"), 
-        __metadata('design:type', Object)
-    ], SpsAboutSection.prototype, "aboutImgSrc", void 0);
+    ], SpsAboutSection.prototype, "about", void 0);
     SpsAboutSection = __decorate([
         core_1.Component({
             selector: 'sps-about-section',
-            template: "\n\t\t<section id=\"about\" class=\"section-padding white-bg text-center\">\n\t\t\t<div class=\"container mb-60\">\n\t\t\t\t<div class=\"row text-center\">\n\t\t\t\t\t<div class=\"col-md-6 wow slideInUp\" data-wow-delay=\"0.2s\" data-wow-duration=\"1s\">\n\t\t\t\t\t\t<img [src]=\"aboutImgSrc\" style=\"max-width: 457px; width: 100%;\"/>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<div class=\"spacer-15\"></div>\n\t\t\t\t\t\t<h6 class=\"page-title-alt color mb-10\">AMERICA <span class=\"text-light\">FIRST</span></h6>\n\t\t\t\t\t\t<h2 class=\"page-title mb-25\">Wisconsin Women <span class=\"text-light\">For Trump</span></h2>\n\t\t\t\t\t\t<p class=\"mb-35\">{{aboutText}}</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</section>\n\t"
+            template: "\n\t\t<section id=\"about\" class=\"section-padding white-bg text-center\">\n\t\t\t<div class=\"container mb-60\">\n\t\t\t\t<div class=\"row text-center\">\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<img [src]=\"about.img\" style=\"max-width: 457px; width: 100%;\"/>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t<div class=\"spacer-15\"></div>\n\t\t\t\t\t\t<h6 class=\"page-title-alt color mb-10\">{{about.smallTitle}}</h6>\n\t\t\t\t\t\t<h2 class=\"page-title mb-25\">{{about.boldTitle}}<span class=\"text-light\">{{about.lightTitle}}</span></h2>\n\t\t\t\t\t\t<p class=\"mb-35\">{{about.text}}</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</section>\n\t"
         }), 
         __metadata('design:paramtypes', [])
     ], SpsAboutSection);
